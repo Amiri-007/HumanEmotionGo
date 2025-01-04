@@ -1,5 +1,7 @@
 ###############################################################################
 # File: dataset.py
+# Author: Michael R. Amiri
+# Date: 2025-01-04
 #
 # Description:
 #  This module contains a custom PyTorch Dataset class (BERTDataset) for
