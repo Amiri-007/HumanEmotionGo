@@ -187,7 +187,3 @@ We gratefully acknowledge the **Greene HPC Center at New York University** for p
 - **Yuqi Hang** (<yh2072@nyu.edu>)  
 - **Ziyu Qi** (<zq2127@nyu.edu>)  
 - **Yuchen Gao** (<yg3113@nyu.edu>)  
-
----
-
-_This README is based on our extended paper “Computational Cognitive Modeling of Human Emotion: A Fine-Grained Sentiment Classification with Representational Analysis,” where we share both the **quantitative** performance metrics and the **qualitative** layerwise insights into how the model clusters emotions._
