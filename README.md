@@ -1,6 +1,6 @@
 # Enhanced Fine-Grained Emotion Classification (CUDA/Parallelized)
 
-**Author**: Michael R. Amiri (ma7422@nyu.edu)
+**Authors**: Michael R. Amiri (ma7422@nyu.edu), Yuqi Hang (yh2072@nyu.edu), Ziyu Qi (zq2127@nyu.edu), Yuchen Gao (yg3113@nyu.edu)
 
 ## Overview
 
