@@ -1,5 +1,7 @@
 ###############################################################################
 # File: model.py
+# Author: Michael R. Amiri
+# Date: 2025-01-04
 #
 # Description:
 #  Defines a CustomRobertaModel with:
