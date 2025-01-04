@@ -1,0 +1,44 @@
+#!/bin/bash
+###############################################################################
+# File: run_on_greene_multi.sh
+# Author: Michael R. Amiri
+# Date: 2025-01-04
+#
+# Description:
+#  This script is an example Slurm batch file for launching the emotion
+#  classification code on multiple GPUs (DDP) on the Greene HPC cluster.
+#
+# Usage:
+#   sbatch run_on_greene_multi.sh
+###############################################################################
+
+#SBATCH --job-name=emotion_multi
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --gres=gpu:4
+#SBATCH --cpus-per-task=4
+#SBATCH --time=24:00:00
+#SBATCH --mem=64G
+#SBATCH --output=logs/emotion_multi_%j.out
+
+module purge
+module load cuda/11.3
+module load python/3.8
+
+# Activate your environment
+source activate my_emotion_env
+
+# Move to project directory
+cd /path/to/my_emotion_classification
+
+# Torchrun command for multi-GPU
+torchrun --nproc_per_node=4 src/main.py \
+    --train_csv data/train.csv \
+    --test_csv data/test.csv \
+    --epochs 10 \
+    --batch_size 32 \
+    --lr 5e-6 \
+    --max_len 128 \
+    --precision fp16 \
+    --save_dir checkpoints \
+    --visualize
