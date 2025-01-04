@@ -37,8 +37,8 @@ my_emotion_classification/
 ├── README.md                  # You are here
 ├── requirements.txt           # Python dependencies
 ├── scripts/
-│   ├── run_on_greene_single.sh  # HPC script for single-GPU usage
-│   └── run_on_greene_multi.sh   # HPC script for multi-GPU usage (DDP)
+│   ├── run_on_gpu_single.sh          # HPC script for single-GPU usage
+│   └── run_on_gpu_cluster_multi.sh   # HPC script for multi-GPU usage (DDP)
 └── src/
     ├── __init__.py
     ├── main.py                 # Main entry point for training + analysis
