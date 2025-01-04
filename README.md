@@ -61,8 +61,8 @@ my_emotion_classification/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Amiri-007/my_emotion_classification.git
-   cd my_emotion_classification
+   git clone https://github.com/Amiri-007/HumanEmotionGo.git
+   cd HumanEmotionGo
    ```
 2. **Install Dependencies**:
    ```bash
@@ -97,7 +97,7 @@ python src/main.py \
 ### **HPC: Single GPU** 
 Submit the **single-GPU** Slurm script:
 ```bash
-sbatch scripts/run_on_greene_single.sh
+sbatch scripts/run_on_gpu_single.sh
 ```
 That script might contain:
 ```bash
@@ -112,14 +112,14 @@ module load cuda/11.3
 module load python/3.8
 source activate my_emotion_env
 
-cd /path/to/my_emotion_classification
+cd /path/to/HumanEmotionGo
 python src/main.py --train_csv data/train.csv ...
 ```
 
 ### **HPC: Multi-GPU (Distributed Data Parallel)** 
 Submit the **multi-GPU** Slurm script:
 ```bash
-sbatch scripts/run_on_greene_multi.sh
+sbatch scripts/run_on_gpu_cluster_multi.sh
 ```
 Inside you might have:
 ```bash
@@ -133,7 +133,7 @@ module load cuda/11.3
 module load python/3.8
 source activate my_emotion_env
 
-cd /path/to/my_emotion_classification
+cd /path/to/HumanEmotionGo
 torchrun --nproc_per_node=4 src/main.py --train_csv data/train.csv ...
 ```
 This spawns **4 processes** across **4 GPUs**, each training on a portion of data, synchronizing gradients with **DDP**.
