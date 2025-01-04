@@ -61,7 +61,7 @@ my_emotion_classification/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/<your_username>/my_emotion_classification.git
+   git clone https://github.com/Amiri-007/my_emotion_classification.git
    cd my_emotion_classification
    ```
 2. **Install Dependencies**:
